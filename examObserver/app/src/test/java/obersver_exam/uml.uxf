@@ -1,0 +1,38 @@
+<diagram program="umletino" version="15.0.0"><zoom_level>9</zoom_level><element><id>UMLClass</id><coordinates><x>945</x><y>90</y><w>126</w><h>99</h></coordinates><panel_attributes>&lt;Interface&gt;
+I_observer
+--
+
+
+--
++update(int matricule)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>864</x><y>270</y><w>126</w><h>81</h></coordinates><panel_attributes>Enseignant
+--
+
+
+--
++update(int matricule)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1053</x><y>270</y><w>126</w><h>81</h></coordinates><panel_attributes>Educateur
+--
+
+
+--
++update(int matricule)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>567</x><y>72</y><w>189</w><h>171</h></coordinates><panel_attributes>Eleve
+--
+- name : String
+- matricule : Int
+- listeObserver : I_observer[]
+
+--
++Eleve(String name, int matricule)
++add(I_observer)
++remove(I_observer)
++notify(int matricule) : String
++getMatricule() : int matricule
++bonjour()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>909</x><y>180</y><w>90</w><h>108</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>80;10;80;60;10;60;10;100</additional_attributes></element><element><id>Relation</id><coordinates><x>972</x><y>180</y><w>126</w><h>108</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;60;120;60;120;100</additional_attributes></element><element><id>Relation</id><coordinates><x>747</x><y>135</y><w>180</w><h>27</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;180;10</additional_attributes></element><element><id>Relation</id><coordinates><x>846</x><y>135</y><w>117</w><h>27</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>110;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>630</x><y>333</y><w>90</w><h>27</h></coordinates><panel_attributes>Client</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>666</x><y>234</y><w>27</w><h>117</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;10;10;110</additional_attributes></element><element><id>UMLNote</id><coordinates><x>900</x><y>396</y><w>153</w><h>63</h></coordinates><panel_attributes>if( matricule dans rtange)
+{
+return "un enseignant" ;
+}
+
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>909</x><y>342</y><w>72</w><h>72</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;10;60;60</additional_attributes></element><element><id>UMLNote</id><coordinates><x>324</x><y>270</y><w>234</w><h>63</h></coordinates><panel_attributes>foreach(I_observer o : listeObserver) {
+	
+}</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>504</x><y>189</y><w>81</w><h>99</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;90;70;10</additional_attributes></element></diagram>
